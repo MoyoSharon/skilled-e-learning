@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --header-text: #13183f;
+  --bg-color: linear-gradient(180deg, #ffffff 1%, #f0f1ff 90%);
+  --btn1-hover: #666ca3;
+  --btn2-idle: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
+  --btn2-hover: linear-gradient(
+    180deg,
+    hsla(13, 100%, 64%, 0.6) 0%,
+    hsla(322, 87%, 55%, 0.6) 100%
+  );
+  --btn3-idle: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
+  --btn3-hover: linear-gradient(
+    180deg,
+    hsl(237, 100%, 64%, 0.6) -54.32%,
+    hsl(322, 87%, 55%, 0.6) 100%
+  );
+  --head-font: "Plus Jakarta Sans", sans-serif;
+}
+
+/* .test {
+    border: 1px solid blue;
+} */
+body {
+  background: var(--bg-color);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: var(--head-font);
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font-weight: 700;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+}
+
+.btn1 {
+  background-color: var(--header-text);
+}
+.btn1:hover {
+  background-color: var(--btn1-hover);
+}
+.btn2 {
+  background: var(--btn2-idle);
+  position: relative;
+  top: 1rem;
+}
+.btn2:hover {
+  background: var(--btn2-hover);
+}
+.btn3 {
+  background: var(--btn3-idle);
+}
+.btn3:hover {
+  background: var(--btn3-hover);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--header-text);
+  padding: 1rem;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  color: var(--btn1-hover);
+}
+.intro h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50.4px;
+  color: var(--header-text);
+}
+
+.intro p {
+  font-size: 400;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  color: var(--btn1-hover);
+}
+.main1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  background: var(--btn2-idle);
+  border-radius: 1rem;
+  padding: 1px 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.courses {
+  margin: 1.5rem 0;
+  box-shadow: 0px 25px 50px 0px hsla(233, 92%, 29%, 0.04);
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 170px;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+.coursesInfo {
+  position: relative;
+  bottom: 3.5rem;
+}
+h4 {
+  color: var(--header-text);
+  font-weight: 800;
+  font-size: 20px;
+}
+.courses a {
+  color: #f74780;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+}
+.courses i,
+.courses img {
+  font-size: 1rem;
+  color: white;
+  padding: 1rem;
+  border-radius: 50px;
+  background: var(--btn2-idle);
+  position: relative;
+  bottom: 3.5rem;
+}
+
+footer {
+  background-color: var(--header-text);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+#headerimg,
+#headerimg3 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    display: flex;
+    flex-direction: row;
+    height: 450px;
+    justify-content: space-between;
+    margin-left: 2rem;
+    padding: 0;
+  }
+  .main,
+  header {
+    padding: 1rem 2rem;
+  }
+  .intro1 {
+    max-width: 350px;
+  }
+  .btn1 {
+    position: relative;
+    right: 50px;
+  }
+  header {
+    margin-bottom: 1rem;
+  }
+  #headerimg {
+    display: block;
+    position: relative;
+    bottom: 100px;
+    padding: 0;
+    margin: 0;
+    max-height: 500px;
+  }
+  #headerimg2,
+  #headerimg3 {
+    display: none;
+  }
+  .main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+  }
+  .main1 {
+    line-height: 3rem;
+    height: 200px;
+  }
+  .mainInfo {
+    flex: 35%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main,
+  header {
+    padding: 1rem 4rem;
+  }
+
+  .btn1 {
+    position: relative;
+    right: 150px;
+  }
+  .intro {
+    margin-left: 4rem;
+  }
+  .intro1 {
+    max-width: 500px;
+  }
+  #headerimg3 {
+    display: block;
+    position: relative;
+    bottom: 50px;
+    padding: 0;
+    margin: 0;
+    max-height: 600px;
+    width: 900px;
+  }
+  #headerimg2,
+  #headerimg {
+    display: none;
+  }
+
+  .mainInfo {
+    flex: 25%;
+  }
+}
